@@ -14,7 +14,7 @@ namespace VehicleTests
         [TestMethod]
         public void YearMonthDay_DateTest()
         {
-            MotorCycle  mc = new MotorCycle("VB896621", new DateTime(2021, 08, 03));
+            MotorCycle  mc = new MotorCycle("VB89662", new DateTime(2021, 08, 03));
             Assert.AreEqual(new DateTime(2021, 08, 03), mc.Date);
         }
 
@@ -22,16 +22,16 @@ namespace VehicleTests
         public void LicenseTest()
         {
             DateTime date = new DateTime(2021, 03, 19);
-            MotorCycle mc = new MotorCycle("VB896621", date);
+            MotorCycle mc = new MotorCycle("VB89662", date);
 
-            Assert.AreEqual("VB896621", mc.LicensePlate);
+            Assert.AreEqual("VB89662", mc.LicensePlate);
         }
 
         [TestMethod]
         public void PriceTest()
         {
             DateTime date = new DateTime(2021, 03, 19);
-            MotorCycle mc = new MotorCycle("VB896621", date);
+            MotorCycle mc = new MotorCycle("VB89662", date);
 
             Assert.AreEqual(125, mc.Price());
         }
@@ -40,7 +40,7 @@ namespace VehicleTests
         public void TypeTest()
         {
             DateTime date = new DateTime(2021, 03, 19);
-            MotorCycle mc = new MotorCycle("VB896621", date);
+            MotorCycle mc = new MotorCycle("VB89662", date);
 
             Assert.AreEqual("MC", mc.VehicleType());
         }

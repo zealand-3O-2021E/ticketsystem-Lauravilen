@@ -25,7 +25,7 @@ namespace ClassLibraryTicketSystem
         /// <param name="date">The date of crossing</param>
         protected Vehicle(string licensePlate, DateTime date)
         {
-            LicensePlate = licensePlate;
+            LicensePlate = SetLicensePlate(licensePlate);
             Date = date;
         }
 
@@ -40,5 +40,17 @@ namespace ClassLibraryTicketSystem
         /// </summary>
         /// <returns>a string</returns>
         public abstract string VehicleType();
+
+        private string SetLicensePlate(string licensePlate)
+        {
+            if (licensePlate.Length <= 7)
+            {
+                return licensePlate;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("License plate cannot be longer than 7 characters", innerException:null);
+            }
+        }
     }
 }
