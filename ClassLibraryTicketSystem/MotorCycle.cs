@@ -6,42 +6,18 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public class MotorCycle
+    public class MotorCycle : Vehicle
     {
-        /// <summary>
-        /// Gets or sets the license plate of the motorcycle
-        /// </summary>
-        public string LicensePlate { get; set; }
-        /// <summary>
-        /// Gets or sets the date of crossing
-        /// </summary>
-        public DateTime Date { get; set; }
-
-        /// <summary>
-        /// Represents a motorcycle and contains relevant information about the MC, for the ticketing system
-        /// </summary>
-        /// <param name="licensePlate">The MC's license plate</param>
-        /// <param name="date">The date of crossing</param>
-        public MotorCycle(string licensePlate, DateTime date)
+        public MotorCycle(string licensePlate, DateTime date) : base(licensePlate, date)
         {
-            LicensePlate = licensePlate;
-            Date = date;
         }
 
-        /// <summary>
-        /// Returns the ticket price as a double
-        /// </summary>
-        /// <returns>125</returns>
-        public double Price()
+        public override double Price()
         {
             return 125;
         }
 
-        /// <summary>
-        /// Returns the motorcycle's vehicle type
-        /// </summary>
-        /// <returns>MC</returns>
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }

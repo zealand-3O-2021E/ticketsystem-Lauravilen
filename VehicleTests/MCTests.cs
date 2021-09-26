@@ -42,7 +42,7 @@ namespace VehicleTests
             DateTime date = new DateTime(2021, 03, 19);
             MotorCycle mc = new MotorCycle("VB896621", date);
 
-            Assert.AreEqual("MC", mc.Vehicle());
+            Assert.AreEqual("MC", mc.VehicleType());
         }
 
     }
