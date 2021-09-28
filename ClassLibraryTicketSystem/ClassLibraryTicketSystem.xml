@@ -19,6 +19,27 @@
             <param name="date"></param>
             <param name="brobizz"></param>
         </member>
+        <member name="P:ClassLibraryTicketSystem.Costumer.Trips">
+            <summary>
+            List of trips over the bridges
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.#ctor">
+            <summary>
+            Represents a costumer and their history of trips over Storebaeltsbroen and Oresundsbroen
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.#ctor(System.Collections.Generic.List{ClassLibraryTicketSystem.Vehicle})">
+            <summary>
+            Represents a costumer and their history of trips over Storebaeltsbroen and Oresundsbroen, instantiated with a List of Vehicles as an argument
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.AddTripToList(ClassLibraryTicketSystem.Vehicle)">
+            <summary>
+            Method to add new trips to the costumer's list
+            </summary>
+            <param name="vehicle"></param>
+        </member>
         <member name="P:ClassLibraryTicketSystem.Vehicle.LicensePlate">
             <summary>
             Gets or sets the license plate of the vehicle
