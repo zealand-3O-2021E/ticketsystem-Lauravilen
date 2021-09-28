@@ -11,11 +11,13 @@ namespace ClassLibraryTicketSystem
         /// <param name="date"></param>
         public Car(string licensePlate, DateTime date) : base(licensePlate, date)
         {
+            TicketPrice = 240;
+            Brobizz = false;
         }
-        
-        public override double Price()
+
+        public Car(string licensePlate, DateTime date, bool brobizz) : base(licensePlate, date, brobizz)
         {
-            return 240;
+            TicketPrice = 240;
         }
 
         public override string VehicleType()

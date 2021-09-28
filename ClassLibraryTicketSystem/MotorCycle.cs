@@ -10,11 +10,13 @@ namespace ClassLibraryTicketSystem
     {
         public MotorCycle(string licensePlate, DateTime date) : base(licensePlate, date)
         {
+            TicketPrice = 125;
+            Brobizz = false;
         }
 
-        public override double Price()
+        public MotorCycle(string licensePlate, DateTime date, bool brobizz) : base(licensePlate, date, brobizz)
         {
-            return 125;
+            TicketPrice = 125;
         }
 
         public override string VehicleType()

@@ -9,12 +9,21 @@ namespace VehicleTests
     {
 
         [TestMethod]
-        public void PriceTest()
+        public void PriceTest_NoBrobizz()
         {
             DateTime date = new DateTime(2021, 09, 20);
             Car car = new Car("CX43772", date);
 
             Assert.AreEqual(240, car.Price());
+        }
+
+        [TestMethod]
+        public void PriceTest_WithBrobizz()
+        {
+            DateTime date = new DateTime(2021, 09, 20);
+            Car car = new Car("CX43772", date, true);
+
+            Assert.AreEqual(228, car.Price(), 0.01);
         }
 
         [TestMethod]

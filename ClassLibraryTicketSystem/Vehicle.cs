@@ -8,6 +8,7 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Vehicle
     {
+
         /// <summary>
         /// Gets or sets the license plate of the vehicle
         /// </summary>
@@ -19,6 +20,13 @@ namespace ClassLibraryTicketSystem
         public DateTime Date { get; set; }
 
         /// <summary>
+        /// Gets or sets the values true or false, depending on whether the vehicle has a Brobizz or not
+        /// </summary>
+        public bool Brobizz { get; set; }
+
+        public double TicketPrice { get; set; }
+
+        /// <summary>
         /// An abstract class to represent different vehicles for the ticketing system
         /// </summary>
         /// <param name="licensePlate">The vehicle's license plate</param>
@@ -27,13 +35,30 @@ namespace ClassLibraryTicketSystem
         {
             LicensePlate = SetLicensePlate(licensePlate);
             Date = date;
+            Brobizz = false;
+        }
+
+        protected Vehicle(string licensePlate, DateTime date, bool brobizz)
+        {
+            LicensePlate = licensePlate;
+            Date = date;
+            Brobizz = brobizz;
         }
 
         /// <summary>
         /// Returns the price of the ticket as a double
         /// </summary>
         /// <returns>a double</returns>
-        public abstract double Price();
+        public virtual double Price()
+        {
+            double price = TicketPrice;
+            if (Brobizz == true)
+            {
+                price = price*0.95;
+            }
+
+            return price;
+        }
 
         /// <summary>
         /// Returns the vehicle type

@@ -28,12 +28,20 @@ namespace VehicleTests
         }
 
         [TestMethod]
-        public void PriceTest()
+        public void PriceTest_NoBrobizz()
         {
             DateTime date = new DateTime(2021, 03, 19);
             MotorCycle mc = new MotorCycle("VB89662", date);
-
             Assert.AreEqual(125, mc.Price());
+        }
+
+        [TestMethod]
+        public void PriceTest_WithBrobizz()
+        {
+            DateTime date = new DateTime(2021, 09, 20);
+            MotorCycle mc = new MotorCycle("CX43772", date, true);
+
+            Assert.AreEqual(118.75, mc.Price(), 0.01);
         }
 
         [TestMethod]
