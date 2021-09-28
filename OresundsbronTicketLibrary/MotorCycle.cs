@@ -3,26 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibraryTicketSystem;
 
-namespace ClassLibraryTicketSystem
+namespace OresundsbronTicketLibrary
 {
-    public class MotorCycle : Vehicle
+    public class MotorCycle : ClassLibraryTicketSystem.MotorCycle
     {
-        private double ticketPrice = 125;
         public MotorCycle(string licensePlate, DateTime date) : base(licensePlate, date)
         {
-            TicketPrice = ticketPrice;
-            Brobizz = false;
         }
 
         public MotorCycle(string licensePlate, DateTime date, bool brobizz) : base(licensePlate, date, brobizz)
         {
-            TicketPrice = ticketPrice;
+        }
+
+        public override double Price()
+        {
+            if (Brobizz == true)
+            {
+                return 73;
+            }
+
+            return 210;
         }
 
         public override string VehicleType()
         {
-            return "MC";
+            return "Oresund MC";
         }
     }
 }

@@ -24,7 +24,7 @@ namespace ClassLibraryTicketSystem
         /// </summary>
         public bool Brobizz { get; set; }
 
-        public double TicketPrice { get; set; }
+        protected double TicketPrice { get; set; }
 
         /// <summary>
         /// An abstract class to represent different vehicles for the ticketing system
