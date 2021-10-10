@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibraryTicketSystem</name>
+    </assembly>
+    <members>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime)">
+            <summary>
+            Represents a car and the relevant information about the car, for the ticketing system
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Represents a car and the relevant information about the car for the ticketing system, including information about Brobizz
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="brobizz"></param>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Costumer.Trips">
+            <summary>
+            List of trips over the bridges
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.#ctor">
+            <summary>
+            Represents a costumer and their history of trips over Storebaeltsbroen and Oresundsbroen
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.#ctor(System.Collections.Generic.List{ClassLibraryTicketSystem.Vehicle})">
+            <summary>
+            Represents a costumer and their history of trips over Storebaeltsbroen and Oresundsbroen, instantiated with a List of Vehicles as an argument
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Costumer.AddTripToList(ClassLibraryTicketSystem.Vehicle)">
+            <summary>
+            Method to add new trips to the costumer's list
+            </summary>
+            <param name="vehicle"></param>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Vehicle.LicensePlate">
+            <summary>
+            Gets or sets the license plate of the vehicle
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Vehicle.Date">
+            <summary>
+            Gets or sets the date of crossing
+            </summary>
+        </member>
+        <member name="P:ClassLibraryTicketSystem.Vehicle.Brobizz">
+            <summary>
+            Gets or sets the values true or false, depending on whether the vehicle has a Brobizz or not
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor(System.String,System.DateTime)">
+            <summary>
+            An abstract class to represent different vehicles for the ticketing system
+            </summary>
+            <param name="licensePlate">The vehicle's license plate</param>
+            <param name="date">The date of crossing</param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.Price">
+            <summary>
+            Returns the price of the ticket as a double
+            </summary>
+            <returns>a double</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.VehicleType">
+            <summary>
+            Returns the vehicle type
+            </summary>
+            <returns>a string</returns>
+        </member>
+    </members>
+</doc>
